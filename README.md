@@ -11,7 +11,7 @@ Save: Save the drawing in PNG format.
 
 
 ## Instructions for use:
-Run the program: Go to the program folder and double-click the drawing_program.py file. In order to run, you need to download all files and folders except README and requirements.
+Run the program: Go to the program folder and double-click the drawing_program.py file. In order to run, you need to download all files except README and requirements. You can also not download folder (pycache), this folder will be created automatically.
 
 Select a tool: Click on the button with the corresponding tool on the menu bar.
 
