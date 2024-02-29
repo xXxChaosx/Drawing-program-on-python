@@ -6,8 +6,8 @@ class DrawingProgram:
         self.root.title("Drawing program") #встановлює назву програми за допомогою root.title
 
         self.root.attributes("-fullscreen", True) #Встановлює режим повного екрану вікна за допомогою root.attributes
-        self.canvas_width = 1350 #Визначає ширину полотна для малювання
-        self.canvas_height = 685 #Визначає висоту полотна для малювання
+        self.canvas_width = self.root.winfo_screenwidth() #Визначає ширину полотна для малювання
+        self.canvas_height = self.root.winfo_screenheight() #Визначає висоту полотна для малювання
 
         #Ініціалізація змінних для поточної кисті або інструмента:
         self.color = "black" #колір за замовчуванням
@@ -32,7 +32,7 @@ class DrawingProgram:
         self.color_icon = tk.Label(self.menu_frame, width=10, height=1, bg=self.color)
         self.color_icon.pack(side=tk.LEFT, padx=5, pady=5) #створює іконку color_icon для відображення обраного кольору, додав для перевірки чи піпетка обрала колір
 
-        size_slider = tk.Scale(self.menu_frame, from_=1, to=20, orient=tk.HORIZONTAL, label="Brush Size", command=self.set_brush_size)
+        size_slider = tk.Scale(self.menu_frame, from_=1, to=100, orient=tk.HORIZONTAL, label="Brush Size", command=self.set_brush_size)
         size_slider.set(self.brush_size)
         size_slider.pack(side=tk.LEFT, padx=5, pady=5) #додає повзунок size_slider для налаштування розміру інструмента та пов'язує його з методом set_brush_size
 
